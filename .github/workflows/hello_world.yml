@@ -9,20 +9,20 @@ on:
       - main
   workflow_dispatch:
 
-  jobs:
-    hello_world:
-      runs-on: ubuntu-latest
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
 
-      steps:
-        - uses: actions/checkout@v5
-        - name: Hello World
-          run: echo " Hello World , Thsi is my first actions runbook"
-          shell: bash
-    
-    good_bye:
-      runs_on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Hello World
+        run: echo " Hello World , Thsi is my first actions runbook"
+        shell: bash
+  
+  good_bye:
+    runs_on: ubuntu-latest
 
-      steps:
-        - name: exiting github actions
-          run: echo "Completed Github actions, exiting "
-          shell: bash
+    steps:
+      - name: exiting github actions
+        run: echo "Completed Github actions, exiting "
+        shell: bash
