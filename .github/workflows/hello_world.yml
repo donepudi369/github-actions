@@ -20,7 +20,7 @@ jobs:
         shell: bash
   
   good_bye:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: exiting github actions
