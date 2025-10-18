@@ -1,0 +1,25 @@
+name : testing matrix
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+
+        strategy:
+            matrix: 
+                os: [3.9, 3.10, 3.11]
+        
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v5
+
+            - name: run code ${{ matrix.os}}
+              run: python --version
