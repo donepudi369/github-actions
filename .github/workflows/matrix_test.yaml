@@ -20,6 +20,12 @@ jobs:
         steps:
             - name: checkout code
               uses: actions/checkout@v5
-
-            - name: run code ${{ matrix.os}}
+            
+            - name: setup python ${{ matrix.os}}
+              uses: actions/setup-python@v4
+              with:
+                python-version: ${{ matrix.os}}
+                
+            - name: verify python version
               run: python --version
+              shell: bash
